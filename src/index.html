@@ -84,18 +84,21 @@
         <h3><b>Расчет cтоимости</b></h3>
         <h4>ТИП САЙТА</h4>
         <select name="stype" id="stype" placeholder="Выберите пункт...">
+            <option value="opt" selected disabled>Выберите пункт...</option>
             <option value="opt1">Лэндинг</option>
             <option value="opt2">Сайт-визитка</option>
             <option value="opt3">Корпоротивный сайт</option>
         </select>
         <h4>Дизайн</h4>
         <select name="design" id="design">
+            <option value="opt" selected disabled>Выберите пункт...</option>
             <option value="opt1">Минимализм</option>
             <option value="opt2">Классический стиль</option>
             <option value="opt3">Корпоротивный стиль</option>
         </select>
         <h4>Адаптивность</h4>
         <select name="aability" id="aability">
+            <option value="opt" selected disabled>Выберите пункт...</option>
             <option value="opt1">a1</option>
             <option value="opt2">a2 </option>
             <option value="opt3">a3 </option>
@@ -143,7 +146,7 @@
             <form action="#">
                 <input type="text" name="name" placeholder="Имя">
                 <input type="text" name="email" placeholder="Email">
-                <input type="text" name="message" placeholder="Сообщение">
+                <textarea name="message" id="mes1" cols="30" rows="10" placeholder="Сообщение"></textarea>
                 <input type="reset" value="Отправить">
             </form>
         </div>
