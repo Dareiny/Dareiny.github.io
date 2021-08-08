@@ -7,22 +7,14 @@
 }
 body{
     font-family: Arial, sans-serif;
-    width: 100%;
 }
-a{
-    color:black;
-    text-decoration: none;
-}
-a:visited{
-    color:black;
-    text-decoration: none;
-}
+
 nav{
     position: fixed;
     height: 60px;
     width: 100%;
     background: #344051; 
-    z-index: 10;
+    z-index: 100;
 }
 main{
     width: 100%;
@@ -34,6 +26,7 @@ main{
     color:#fff;
     font-size: 23px;
     line-height: 60px;
+    padding-left: 20%;
     float: left;
     -webkit-animation: coming 2s;
     -o-animation: coming 2s ;
@@ -47,23 +40,8 @@ main{
         opacity: 1;
     }
 }
-.menu{
-    float: left;
-}
 
-.menu li{
-    margin-right: 30px;
-    float: left;
-    line-height: 60px;
-    color: #fff;
-    text-transform: uppercase;
-    -webkit-animation: topshift 2s ease forwards;
-    -o-animation: topshift 2s ease forwards;
-    animation: topshift 2s ease forwards;
-    opacity: 0;
-}
 .menu li a{
-    font-size: 14px;
     color:white;
     transition: all 0.1s;
     transform: scale(1);
@@ -72,17 +50,10 @@ main{
 .menu li a:visited{
     color:white;
 }
-.menu li a:focus{
-    color: white;
-    background: none;
-    
-}
 .menu li a:hover{
     color: #e88604;
-    background: none;
     
 }
-
 .menu li a:active{
     transform: scale(1.05);
 }
@@ -111,12 +82,6 @@ main{
         margin-top: 0px;
     }
 }
-.white-btn{
-    color: white;
-}
-.white-btn:visited{
-    color: white;
-}
 @keyframes titlemove{
     from{
         opacity: 0;
@@ -124,13 +89,14 @@ main{
     }
     to{
         opacity: 1;
+        margin-left: 20%;
     }
 }
-
 .main{
-    widows: 100%;
     height:100%;
-    background: url(../img/boy.png) 90% 100%/auto 85% no-repeat,url(../img/bgmain.jpg) center no-repeat;
+    width: 100%;
+    background:url(../img/shadmain.png) 0px 917px/100% 38px no-repeat, url(../img/boy.png) 90% 100%/auto 85% no-repeat,url(../img/bgmain.jpg) center no-repeat;
+    z-index: 2;
 }
 .title_container input{
     transition: all 0.2s;
@@ -146,8 +112,8 @@ main{
 }
 .title_container{
     float: left;
+    margin: 22% 0 0 20%;
     text-align: center;
-    width:100%;
     opacity: 0;
     -webkit-animation: titlemove 1s ease forwards;
     -o-animation: titlemove 1s ease forwards; 
@@ -155,10 +121,10 @@ main{
     -webkit-animation-delay: 2.4s;
     -o-animation-delay: 2.4s;
     animation-delay: 2.4s; 
+    z-index: 2;
 }
 .title_container h1{
-    font-weight: 600;
-    font-family: Arial,sans-serif;
+    font-weight: bold;
     font-size: 79px;
     color: #2c384a;
 }
@@ -178,30 +144,10 @@ main{
     padding: 0px 16px;
     margin: 58px 14px 0px 14px;
 }
-@media (max-width:991px) {
-    .title_container, .title_container h1 ,.title_container h4 ,.title_container input{
-        color: #fff;
-        position: relative;
-        z-index: 3;
-    }
-    .title_container input{
-        border: 2px solid #fff;
-    }
-    .main{
-        position: relative;
-    }
-    .main:after{
-        z-index: 1;
-        content: "";
-        bottom: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        position:absolute;
-        background-color: rgba(0,0,0,0.4);
-    }
+.about_me{
+    width: 100%;
+    height: 716px;
 }
-
 h3{
     color: #3f495a;
     padding-top: 105px;
@@ -215,16 +161,14 @@ h3{
     padding-top: 30px;
 }
 .avatar{
-    text-align: center;
     padding-top:60px;
+    padding-left: 45%;
 }
 .disc{
+    padding:0px 580px 0px 630px;
     text-align: left;
     font-size: 17px;
     color: #3f495a;
-}
-.inputab{
-    text-align: center;
 }
 .about_me input{
     background: url("../img/dwnldr.png") no-repeat 5px ; 
@@ -234,6 +178,7 @@ h3{
     border-radius: 4px;
     color: #6f707e;
     font-size: 17px;
+    margin-left: 46.5%;
     padding-left: 20px;
     transition: 0.3s; 
 }
@@ -247,6 +192,8 @@ h3{
     transform: scale(1.05);
 }
 .abilities{
+    width: 100%;
+    height: 522px;
     background: url(../img/abph.jpg) center no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -254,16 +201,16 @@ h3{
 
 .ab_list{
     float: left;
-    padding: 105px 0px;
+    padding: 105px 0px 90px 410px;
 }
 .ab_list > div{
-    padding-top: 50px;
     font-size: 17px;
     color: #3f495a;
     text-align: center;
-    height: 250px;
+    height: 160px;
     width: 210px;
     float: left;
+    margin-right: 80px;
 }
 .ab_list img{
     margin-bottom: 35px;
@@ -275,20 +222,27 @@ h3{
     text-align: center;
 }
 .cases{
+    width: 100%;
+    height: 1080px;
     font-size: 17px;
     color: #3f495a;
 }
 .cases > span{
     display: inline-block;
     margin-top: 35px;
-    text-align: center;
+    margin-left: 550px;
 }
 .case_list{
     margin-top: 25px;
+    padding-left: 375px;
+    width: 1170px;
 }
 .webinfo1{
     line-height: 13px;
+    float: left;
     padding-top: 35px;
+    max-height: 105px;
+    width: 190px;
 }
 .case_list h4{
     font-weight: bold;
@@ -305,6 +259,8 @@ h3{
 .webinfo2{
     font-size: 18px;
     line-height: 24px;
+    margin-left: 290px;
+    width: 850px;
     padding-top: 35px;
     height: 105px;
 }
@@ -312,9 +268,8 @@ h3{
     display: inline-block;
     padding-top: 10px;
 }
-
-.cases input{
-    margin-top: 3%;
+.case_list input{
+    margin-top: 50px;
     height: 44px;
     width: 202px;
     background: #63b5ae;
@@ -323,22 +278,26 @@ h3{
     transition-duration: 0.25s;
     transform: scale(1);
 }
-.cases input:hover{
+.case_list input:hover{
     background-color: #cbd7d6;
     color: #63b5ae;
     border: 2px solid #63b5ae;
 }
-.cases input:active{
+.case_list input:active{
     background-color: #bee0dd;
     color:#4e8e89;
     transform: scale(1.05);
 }
-
+.price{
+    height: 930px;
+    width: 891px;
+}
 .price h3{
     margin-top: 180px;
 }
 .select{
     padding-top: 50px;
+    margin-left: 494px;
 }
 .select h4{
     font-size: 29px;
@@ -352,7 +311,7 @@ h3{
     padding-left: 15px;
     border: none;
     background: #eeeeee;
-    width: 100%;
+    width: 891px;
     height: 57px;
     margin-top: 25px;
     margin-bottom: 50px;
@@ -361,37 +320,45 @@ h3{
     float: left;
 }
 .price > div{
+    width: 891px;
     margin-top: 14px;
     margin-bottom: 14px;
     font-size: 20px;
     font-weight: bold;
 }
-
+.count{
+    padding-left: 880px;
+}
 .select2{
-    margin-bottom: 50px;
-    border-top: 2px solid #eee;
+    margin-left: 494px;
+}
+.select{
+    border-bottom: 2px solid #eee;
 }
 .pricecount{
     padding-top: 100px;
 }
 .stats{
+    height: 500px;
     background: url(../img/statph.jpg) no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
 .statlist{
+    white-space: nowrap;
     float: left;
-    padding-top: 70px;
+    padding: 70px 0px 90px 370px;
 }
 .statlist > div{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     color: #323d4f;
     text-align: center;
-    height: 250px;
+    height: 160px;
     width: 210px;
     float: left;
+    margin-right: 100px;
 }
 .statlist h4{
     padding-top: 30px;
@@ -411,16 +378,18 @@ h3{
 }
 .rev{
     text-align: center;
+    padding-left: 615px;
+    padding-right:615px;
 }
 .customer{
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding: 40px 800px 60px 800px;
 }
 .contacts{
     text-align: center;
     color: white;
-    background: url(../img/contph.jpg) center/cover no-repeat;
+    height: 810px;
+    background: url(../img/contph.jpg) no-repeat;
 }
 .social{
     display:none;
@@ -431,7 +400,7 @@ h3{
 .contlist{
     width: 100%;
     float: left;
-    padding-top: 50px;
+    padding: 50px 0px 40px 587px;
 }
 .conttext{
     padding-top: 35px;
@@ -440,8 +409,10 @@ h3{
     font-size: 17px;
     color: white;
     text-align: center;
-    height: 150px;
+    height: 70px;
+    width: 170px;
     float: left;
+    margin-right: 100px;
 }
 .contlist img{
     margin-bottom: 20px;
@@ -458,34 +429,35 @@ h3{
 }
 form{
     margin-top: 45px;
+    float: left;
     font-size: 17px;
     color: #5d5d5e;
-    width: 100%;
-    margin-bottom: 10%;
+    margin-left: 570px;
+    width: 735px;
 }
-.inp1, .inp2{
+form input{
     float: left;
 }
 .inp1{
     background: #d5d8de;
     height: 35px;
-    width: 47.5%;
+    width: 350px;
     
 }
 .inp2{
     background: #d5d8de;
     height: 35px;
-    width: 47.5%;
-    margin-left: 5%;
+    width: 350px;
+    margin-left: 35px;
 }
 textarea{
     margin-top: 15px;
     background: #d5d8de;
-    width: 100%;
+    width: 735px;
     height: 94px;
 }
 .send{
-    justify-content: center;
+    margin-left: 320px;
     color: white;
     background: none;
     margin-top: 30px;
@@ -506,10 +478,12 @@ textarea{
     transform: scale(1.05);
 }
 .location{
-    background: url(../img/map.jpg) center/cover no-repeat;
+    height:350px;
+    background: url(../img/map.jpg) no-repeat;
 }
 .location input{
-    margin:15% 0; 
+    margin-left: 865px;
+    margin-top: 140px;
     width: 136px;
     height:46px;
     background: white;
@@ -525,6 +499,7 @@ textarea{
     box-shadow: 1px 2px 1px grey;
 }
 footer{
+    margin-top: 5750px;
     text-align: center;
     color: #fff;
     height: 95px;
@@ -533,5 +508,21 @@ footer{
 .copyright{
     padding-top: 40px;
 }
+.menu{
+    float: left;
+    padding-left: 23%;
+    z-index: 1;
+}
 
-
+.menu li{
+    float: left;
+    line-height: 60px;
+    color: #fff;
+    margin-right: 40px;
+    font-size: 17px;
+    text-transform: uppercase;
+    -webkit-animation: topshift 2s ease forwards;
+    -o-animation: topshift 2s ease forwards;
+    animation: topshift 2s ease forwards;
+    opacity: 0;
+}
