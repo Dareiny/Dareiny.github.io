@@ -178,29 +178,7 @@ main{
     padding: 0px 16px;
     margin: 58px 14px 0px 14px;
 }
-@media (max-width:991px) {
-    .title_container, .title_container h1 ,.title_container h4 ,.title_container input{
-        color: #fff;
-        position: relative;
-        z-index: 3;
-    }
-    .title_container input{
-        border: 2px solid #fff;
-    }
-    .main{
-        position: relative;
-    }
-    .main:after{
-        z-index: 1;
-        content: "";
-        bottom: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        position:absolute;
-        background-color: rgba(0,0,0,0.4);
-    }
-}
+
 
 h3{
     color: #3f495a;
@@ -422,9 +400,6 @@ h3{
     color: white;
     background: url(../img/Contacts.jpg) center/cover no-repeat;
 }
-.social{
-    display:none;
-}
 .contacts h3{
     color: white;
 }
@@ -461,7 +436,7 @@ form{
     font-size: 17px;
     color: #5d5d5e;
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 .inp1, .inp2{
     float: left;
@@ -508,6 +483,8 @@ textarea{
 .location{
     background: url(../img/map.jpg) center/cover no-repeat;
 }
+
+
 .location input{
     margin:15% 0; 
     width: 136px;
@@ -536,6 +513,30 @@ footer{
 }
 .copyright{
     padding-top: 40px;
+}
+@media (max-width:991px) {
+    .title_container, .title_container h1 ,.title_container h4 ,.title_container input{
+        color: #fff;
+        position: relative;
+        z-index: 3;
+    }
+    .title_container input{
+        border: 2px solid #fff;
+    }
+    .main{
+        position: relative;
+    }
+    .main:after{
+        z-index: 1;
+        content: "";
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position:absolute;
+        background-color: rgba(0,0,0,0.4);
+    }
+    
 }
 
 
