@@ -518,9 +518,13 @@ textarea{
 }
 
 .location input:hover{
-box-shadow: 3px 6px 4px grey;
+    position: relative;
+    box-shadow: 3px 6px 4px grey;
 }
 .location input:active{
+    top:2px;
+    left:1px;
+    position: relative;
     box-shadow: 1px 2px 1px grey;
 }
 
