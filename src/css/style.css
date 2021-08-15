@@ -182,7 +182,7 @@ main{
 
 h3{
     color: #3f495a;
-    padding-top: 105px;
+    padding-top: 90px;
     text-align: center;
     font-size: 33px;
     text-transform: uppercase;
@@ -190,7 +190,6 @@ h3{
 }
 .underline{
     text-align: center;
-    padding-top: 30px;
 }
 .avatar{
     text-align: center;
