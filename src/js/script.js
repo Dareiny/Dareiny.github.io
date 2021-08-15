@@ -13,7 +13,7 @@ if (confirm("Рассчитать стоимость заказа?")){
         timings: [
             siteType = [4, 3 , 6],
             siteDesign = [1, 1, 2],
-            siteAdapt = [2, 1, 3]
+            siteAdapt = [2, 2, 4]
         ],
     };
     type = prompt("Тип сайта: 1 - Лэндинг: 100 рублей. 2 - Сайт-визитка: 50 рублей. 3 - Корпоротивный сайт: 200 рублей.", 1);
@@ -33,7 +33,7 @@ if (confirm("Рассчитать стоимость заказа?")){
         siteAdapt = caluclator.timings["2"][adapt - 1];
         return siteAdapt + siteDesign + siteType;
     }
-    alert("Стоимость заказа: " + priceCount() + ". Длительность выполнения: " + timeCount());
+    alert("Стоимость заказа: " + priceCount() + "рублей. Длительность выполнения: " + timeCount() + "дней");
 };
 
     
