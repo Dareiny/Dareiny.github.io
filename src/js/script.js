@@ -32,7 +32,7 @@ if (confirm("Рассчитать стоимость заказа?")){
         siteAdapt = caluclator.timings["2"][adapt - 1];
         return siteAdapt + siteDesign + siteType;
     }
-    alert("Стоимость заказа: " + priceCount() + " рублей. Длительность выполнения: " + timeCount() + " дней");
+    alert("Стоимость заказа: " + priceCount() + " " + "рублей. Длительность выполнения: " + timeCount() + " " + "дней");
 };
 
     
