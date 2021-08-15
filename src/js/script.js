@@ -20,7 +20,6 @@ if (confirm("Рассчитать стоимость заказа?")){
     design = prompt("Дизайн: 1 - Минимализм: +100 рублей. 2 - Классический: + 100 рублей. 3 - Корпоротивный: +150 рублей", 1);
     adapt = prompt("Адаптивность: 1 - Телефоны: +50 рублей. 2 - Компьютеры: +0 рублей. 3 - Адаптивный: +200 рублей", 1); 
     
-    
     function priceCount (siteType, siteDesign, siteAdapt){
         siteType = caluclator.price["0"][type - 1];
         siteDesign = caluclator.price["1"][design - 1];
@@ -33,7 +32,7 @@ if (confirm("Рассчитать стоимость заказа?")){
         siteAdapt = caluclator.timings["2"][adapt - 1];
         return siteAdapt + siteDesign + siteType;
     }
-    alert("Стоимость заказа: " + priceCount() + "рублей. Длительность выполнения: " + timeCount() + "дней");
+    alert("Стоимость заказа: " + priceCount() + " рублей. Длительность выполнения: " + timeCount() + " дней");
 };
 
     
