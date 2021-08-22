@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/style.css">
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
 </head>
 <body>
     <header>
@@ -18,12 +20,12 @@
                     <div class="px-0 col-xxl-6 offset-xxl-4 col-xl-7 offset-xl-2 col-lg-8 offset-lg-1 d-none d-lg-block">
                         <div class="menu">
                           <ul>
-                              <li><a  href="#">Обо мне</a></li>
-                              <li><a  href="#">Услуги</a></li>
-                              <li><a  href="#">Кейсы</a></li>
-                              <li><a  href="#">Прайс</a></li>
-                              <li><a  href="#">Отзывы</a></li>
-                              <li><a  href="#">контакты</a></li>
+                              <li><a  class="active_nav"  href="#about_me">Обо мне</a></li>
+                              <li><a  href="#abilities">Услуги</a></li>
+                              <li><a  href="#cases">Кейсы</a></li>
+                              <li><a  href="#sPrice">Прайс</a></li>
+                              <li><a  href="#review">Отзывы</a></li>
+                              <li><a  href="#contacts">контакты</a></li>
                           </ul>
                         </div>
                     </div>
@@ -56,12 +58,29 @@
                         <div class="title_container mt-5">
                             <h1>Привет<br>Я Андрей Браун</h1>
                             <h4>Фулл стек веб-разроботчик</h4>
-                            <input type="submit" value="Обо мне">
+                            <input type="submit" value="Обо мне" data-bs-toggle="modal" data-bs-target="#staticBackdropOrder">
                             <input type="submit" value="Мои работы">
                         </div>
         </div></div></div>
+        <div class="modal fade" id="staticBackdropOrder" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Вот такой я</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Тут всякий текст о том какой я...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Понял</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
-    <section class="about_me ">
+    <section class="about_me" id="about_me">
         <div class="container w-100 h-67 pb-5">
             <div class="row h-100 align-items-center">
                 <h3>ОБО МНЕ</h3>
@@ -74,32 +93,32 @@
                         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ratione ut molestiae fugiat aliquam, voluptate adipisci consequuntur, saepe impedit pariatur quasi.</div>
                         <br><br>
                     </div>
-                    <div class="inputab"><input type="submit" value="Скачать резюме"></div>
+                    <div class="inputab"><input type="submit" value="Скачать резюме" ></div>
             </div>
         </div>
     </section>
-    <section class="abilities">
+    <section class="abilities" id="abilities">
         <div class="container">
             <div class="row">
                 <h3>ЧТО Я УМЕЮ</h3>
                 <div class="underline"><img src="img/abme.jpg" alt="иконка"></div>
                 <div class="ab_list flex-column flex-lg-row d-flex justify-content-lg-between align-items-center">
-                    <div>
+                    <div class="aa1 element_animation">
                         <img src="img/notebook.png" alt="Веб-дизайн">
                         <h4>Веб-дизайн</h4><br>
                         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil numquam harum est, quaerat fuga dolores.</div>
                     </div>
-                    <div>
+                    <div class="aa2 element_animation">
                         <img src="img/htmlsign.png" alt="Разработка">
                         <h4>Разработка</h4><br>
                         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil numquam harum est, quaerat fuga dolores.</div>
                     </div>
-                    <div>
+                    <div class="aa3 element_animation">
                         <img src="img/rocket.png" alt="CEO-Оптимизация">
                         <h4>CEO-Оптимизация</h4><br>
                         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil numquam harum est, quaerat fuga dolores.</div>
                     </div >
-                    <div>
+                    <div class="aa4 element_animation">
                         <img src="img/gromm.png" alt="громмофон">
                         <h4>Маркетинг</h4><br>
                         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil numquam harum    est, quaerat fuga dolores.</div>
@@ -109,14 +128,18 @@
             </div>
         </div>
     </section>
-    <section class="cases">
+    <section class="cases" id="cases">
         <div class="container h-100 w-100">
             <div class="row h-100">
                 <div class="cases1 justify-content-center">
                     <h3>КЕЙСЫ</h3>
                 <div class="underline pb-3"><img src="img/abme.jpg" alt="иконка"></div>
                 <div class="text-center col-lg-10 offset-lg-1 offset-xl-2 col-xl-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur iste, animi deleniti voluptate delectus ipsa.</div>
-                <img src="img/casescrin.png" class="img-fluid col-12 pt-4" alt="Кейсы"><br>
+                <div class="fotorama  foto_slider d-flex justify-content-center pt-5 col-12" data-fit="cover" data-loop="true" data-width="80%" data-height="50%" data-click="false" data-swipe="false">>
+                    <a href="img/site1.jpg"><img src="img/site1.jpg"></a>
+                    <img src="img/site2.jpg">
+                    <img src="img/site3.png">
+                </div>
                 <div class="case_list d-sm-flex">
                     <div class="webinfo1 offset-sm-1 col-12 col-sm-4 h-100 ">
                     <h4>CLIENT:</h4><br>
@@ -134,78 +157,81 @@
             </div>
         </div>
     </section>
-    <div class="pricecount"><h3>Расчет cтоимости</h3></div>
-    <section class="price">
+    <div class="pricecount" id="sPrice"><h3>Расчет cтоимости</h3></div>
+    <section class="sPrice">
         <div class="container">
             <div class="row">
-                <div class="select">
+                <div class="setSelect">
             <h4>ТИП САЙТА</h4>
-            <select name="stype" id="stype" placeholder="Выберите пункт...">
-                <option value="opt" selected disabled>Выберите пункт...</option>
-                <option value="opt1">Лэндинг</option>
-                <option value="opt2">Сайт-визитка</option>
-                <option value="opt3">Корпоротивный сайт</option>
+            <select name="stype" class="priceSelector" id="sType">
+                <option value="0" selected disabled>Выберите пункт...</option>
+                <option value="1">Лэндинг</option>
+                <option value="2">Сайт-визитка</option>
+                <option value="3">Корпоротивный сайт</option>
             </select>
             <h4>Дизайн</h4>
-            <select name="design" id="design">
-                <option value="opt" selected disabled>Выберите пункт...</option>
-                <option value="opt1">Минимализм</option>
-                <option value="opt2">Классический стиль</option>
-                <option value="opt3">Корпоротивный стиль</option>
+            <select name="design" class="priceSelector" id="sDesign">
+                <option value="0" selected disabled>Выберите пункт...</option>
+                <option value="1">Минимализм</option>
+                <option value="2">Классический стиль</option>
+                <option value="3">Корпоротивный стиль</option>
             </select>
             <h4>Адаптивность</h4>
-            <select name="aability" class="aability" id="aability">
-                <option value="opt" selected disabled>Выберите пункт...</option>
-                <option value="opt1">Телефоны</option>
-                <option value="opt2">Компьютеры</option>
-                <option value="opt3">Адаптивный</option>
+            <select name="aability" class="priceSelector" id="sAability">
+                <option value="0" selected disabled>Выберите пункт...</option>
+                <option value="1">Телефоны</option>
+                <option value="2">Компьютеры</option>
+                <option value="3">Адаптивный</option>
             </select>
             
         </div>
-        <div class="select2">
+        <div class="setSelect2">
             <div class="w-100 d-flex justify-content-between">
                 <div >Сроки</div>
-                <div class="count">0</div>
+                <div id="countTime">0</div>
             </div><br>
             <div class="w-100 d-flex justify-content-between">
                 <div >Стоимость</div>
-                <div class="count ">0</div>
+                <div id="countPrice">0</div>
             </div>
         </div>
             </div>
+        
         </div>
+
+        
     </section>
     <section class="stats">
         <div class="container">
             <div class="row">
                 <h3>НЕМНОГО СТАТИСТИКИ</h3>
                 <div class="underline"><img src="img/abme.jpg" alt="иконка"></div>
-                <div class="statlist pt-10 flex-column flex-lg-row d-flex justify-content-lg-between align-items-center">
+                <div id="statList" class="statlist pt-10 flex-column flex-lg-row d-flex justify-content-lg-between align-items-center">
                     <div>
                         <img src="img/smile.png" alt="Счастье">
-                        <h4>120</h4>
-                        <div>СЧАСТЛИВЫХ КЛИЕНТОВ</div>
+                        <div data-num="120" class="statNumber">0</div>
+                        <div class="statText">СЧАСТЛИВЫХ КЛИЕНТОВ</div>
                     </div>
                     <div>
                         <img src="img/brackets.png" alt="html">
-                        <h4>4,600</h4>
-                        <div>ЧАСОВ РАБОТЫ</div>
+                        <div data-num="4600" class="statNumber">0</div>
+                        <div class="statText">ЧАСОВ РАБОТЫ</div>
                     </div>
                     <div>
                         <img src="img/checkbox.png" alt="Checkbox">
-                        <h4>340</h4>
-                        <div>ПРОЕКТОВ ЗАВЕРШЕНО</div>
+                        <div data-num="340" class="statNumber">0</div>
+                        <div class="statText">ПРОЕКТОВ ЗАВЕРШЕНО</div>
                     </div>
                     <div>
                         <img src="img/award.png" alt="award">
-                        <h4>23</h4>
-                        <div>НАГРАД ПОЛУЧЕНО</div>
+                        <div data-num="23" class="statNumber">0</div>
+                        <div class="statText">НАГРАД ПОЛУЧЕНО</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="review">
+    <section class="review" id="review">
         <div class="container h-100 w-100">
             <div class="row h-100 justify-content-center">
                 <h3>ОТЗЫВЫ</h3>
@@ -216,7 +242,7 @@
             </div>
         </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container">
             <div class="row">
                 <h3>Мои Контакты</h3>
@@ -263,7 +289,10 @@
         </footer>
     </main>
     
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
