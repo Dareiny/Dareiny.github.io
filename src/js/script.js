@@ -73,7 +73,7 @@ $(document).ready(function(){
         var
           cPos = $(this).offset().top,
           topWindow = $(window).scrollTop();
-        if (cPos < topWindow + 600) {
+        if (cPos < topWindow + 450) {
           if (cc < 2) {
             $(".statNumber").addClass("viz");
             $('div').each(function() {
